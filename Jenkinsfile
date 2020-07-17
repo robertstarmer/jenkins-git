@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Changing the project Uno more"'
+                sh 'echo "It works!!!!!!!"'
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
