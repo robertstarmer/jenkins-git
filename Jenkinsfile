@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Disabling the auto run option"'
+                sh 'echo "This should come from a PR"'
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
