@@ -14,5 +14,13 @@ pipeline {
                 '''
             }
         }
+        stage('Show disc space') {
+            steps {
+                sh '''
+                    echo "Displaying drive space"
+                    df -h
+                ...
+            }
+        }
     }
 }
