@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello!--"'
+                sh 'echo "Hello!-PPP"'
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
