@@ -7,4 +7,4 @@ sadf
 
 
 sadf
-[](http://ec2-54-158-96-232.compute-1.amazonaws.com:8080/buildStatus/icon?job=del)](http://ec2-54-158-96-232.compute-1.amazonaws.com:8080/job/del/)
+[!](http://ec2-54-158-96-232.compute-1.amazonaws.com:8080/buildStatus/icon?job=del)](http://ec2-54-158-96-232.compute-1.amazonaws.com:8080/job/del/)
