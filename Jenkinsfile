@@ -12,15 +12,26 @@ pipeline {
     }
 
     stage('stage3') {
-      steps {
-        withAnt(installation: '8', jdk: '8') {
-          sleep 1
+      parallel {
+        stage('stage3') {
+          steps {
+            withAnt(installation: '8', jdk: '8') {
+              sleep 1
+            }
+
+            node(label: 'll') {
+              sh 'sh'
+              archiveArtifacts(allowEmptyArchive: true, artifacts: 'y')
+              error 'Message'
+            }
+
+          }
         }
 
-        node(label: 'll') {
-          sh 'sh'
-          archiveArtifacts(allowEmptyArchive: true, artifacts: 'y')
-          error 'Message'
+        stage('tgyu') {
+          steps {
+            bat 'u'
+          }
         }
 
       }
