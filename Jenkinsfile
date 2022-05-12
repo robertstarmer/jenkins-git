@@ -17,8 +17,17 @@ pipeline {
           sleep 1
         }
 
+        node(label: 'll') {
+          sh 'sh'
+          archiveArtifacts(allowEmptyArchive: true, artifacts: 'y')
+          error 'Message'
+        }
+
       }
     }
 
+  }
+  environment {
+    t = 't'
   }
 }
