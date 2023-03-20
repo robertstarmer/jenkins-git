@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'env'
                 sh 'echo "building hello world"'
             }
         }
