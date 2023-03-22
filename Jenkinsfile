@@ -10,7 +10,9 @@ pipeline {
         
         stage('Test') {
             steps {
-                def prop_readr = load "helper.groovy"
+                script {
+                    def prop_readr = load "helper.groovy"
+                }
                 // test1 = prop_readr.get_property("my_prop.properties")
                 echo "got the propertie info: $test1"
                 sh 'echo "Testing Hello World"'
