@@ -4,5 +4,3 @@ def get_property(String prop_file){
 }
 
 return this
-
-s
