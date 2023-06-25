@@ -15,5 +15,5 @@ if __name__ == "__main__":
     mystock['InStock'] = {'Product': 'Earphone', 'Price': 800, 'Quantity': 50, 'InStock': 'Yes'}
     with open("output.json",'w') as f:
         json.dump(mystock,f)
-        
-    print(json.dumps(mystock))
+
+    # print(json.dumps(mystock))
