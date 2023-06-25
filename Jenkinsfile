@@ -16,6 +16,8 @@ pipeline {
                 }
                 echo "got the propertie info: $test1"
                 sh 'echo "Testing Hello World"'
+                sh label: "get env", script: "env"
+                sh label: "run python file", script: "python3 my_python.py"
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
