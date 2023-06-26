@@ -16,7 +16,8 @@ pipeline {
                     test1 = prop_readr.get_property("my_prop.properties")
                     sh label: "run python file", script: "python3 my_python.py -mos_tasks_filename $J_FILENAME"
                     def json_content = readFile(file: J_FILENAME)
-                    archiveSingleFile(track_file=false, file_path=J_FILENAME)
+                    archiveSingleFile(track_file=false, file_path=J_FILENAME
+                    )
                     echo "json content is $json_content"
                     // def jsonContent = readJSON text: jsonFile
                 }
@@ -46,6 +47,6 @@ def archiveSingleFile(boolean track_file, String file_path){
         echo "ERROR: try to archive: $file_path but it does not exist."
         return
     }
-    archiveArtifacts "$file_path", fingerprint: track_file
+    archiveArtifacts "$file_path"
 
 }
