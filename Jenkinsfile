@@ -39,7 +39,7 @@ pipeline {
     }
 }
 
-def archiveSingleFile(String file_path, Bool track_file){
+def archiveSingleFile(String file_path, boolean track_file){
      sh label: "check current path", script: "pwd;"
     if (!fileExists(file_path)) {
         echo "ERROR: try to archive: $file_path but it does not exist."
