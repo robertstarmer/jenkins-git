@@ -45,5 +45,5 @@ def archiveSingleFile(String file_path, boolean track_file){
         echo "ERROR: try to archive: $file_path but it does not exist."
         return
     }
-    archiveArtifacts "$file_path", fingerprint: track_file
+    archiveArtifacts $file_path, fingerprint: track_file
 }
