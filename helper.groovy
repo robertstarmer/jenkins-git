@@ -10,4 +10,8 @@ def get_property(String prop_file){
     return ret
 }
 
+def check_env() {
+    sh label: "check env", script: "env"
+}
+
 return this

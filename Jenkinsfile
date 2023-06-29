@@ -5,6 +5,8 @@ pipeline {
             steps {
                 sh 'env'
                 sh 'echo "building hello world"'
+                sh 'source ./my_env'
+                sh 'env'
             }
         }
         
@@ -18,6 +20,8 @@ pipeline {
                     def json_content = readFile(file: J_FILENAME)
                     archiveSingleFile(file_path=J_FILENAME)
                     echo "json content is $json_content"
+                    echo "check env"
+                    prop_readr.check_env()
                     // def jsonContent = readJSON text: jsonFile
                 }
                 echo "got the propertie info: $test1"
