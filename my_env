@@ -1,0 +1,2 @@
+export TEST_WORKSPACE=`pwd`
+export NEW_ENV="$TEST_WORKSPACE/test"
