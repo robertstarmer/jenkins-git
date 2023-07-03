@@ -2,11 +2,16 @@ pipeline {
     agent any
     stages {
         stage('Build') {
+            environment {
+                venv_name = "test_venv"
+            }
             steps {
-                sh 'env'
-                sh 'echo "building hello world"'
+                sh "python3 -m venv ${venv_name}"
+                sh "source ${venv_name}/bin/activate"
+                sh "which python"
                 sh 'source ./my_env'
                 sh 'env'
+
             }
         }
         
