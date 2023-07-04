@@ -6,9 +6,11 @@ pipeline {
                 venv_name = "test_venv"
             }
             steps {
-                sh "python3 -m venv ${venv_name}"
-                sh "source ${venv_name}/bin/activate"
-                sh "which python"
+                sh """
+                python3 -m venv venv; source ./venv/bin/activate; pip install -r requirements.txt
+                python -u -m pytest -s -v test/test_basic_stuff.py
+
+                """
                 sh 'source ./my_env'
                 sh 'env'
 
