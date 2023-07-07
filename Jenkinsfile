@@ -23,6 +23,8 @@ pipeline {
                     J_FILENAME = "new_output.json"
                     def prop_readr = load "helper.groovy"
                     test1 = prop_readr.get_property("my_prop.properties")
+                    test_info = readProperties file: "my_file.txt"
+                    echo "test_info is $test_info"
                     sh label: "run python file", script: "python3 my_python.py -mos_tasks_filename $J_FILENAME"
                     def json_content = readFile(file: J_FILENAME)
                     archiveSingleFile(file_path=J_FILENAME)

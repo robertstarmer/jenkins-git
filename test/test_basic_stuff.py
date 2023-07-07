@@ -1,4 +1,10 @@
+
+
+import _pytest.config
+import conftest
+
 import test_case
+
 
 class TestBasicStuff(test_case.TestCase):
 
@@ -22,4 +28,12 @@ class TestBasicStuff(test_case.TestCase):
 
     def test_one(self):
         print("I am test one lets pass")
+        dict_to_save = {
+            "zone": 94.32,
+            "area": "somewhere",
+            "integer": False
+        }
+        with open("my_file.txt", "w") as f:
+            for k, v in dict_to_save.items():
+                f.write(f"{k}={v}\n")
         assert True
