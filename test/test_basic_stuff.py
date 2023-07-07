@@ -31,7 +31,7 @@ class TestBasicStuff(test_case.TestCase):
         dict_to_save = {
             "zone": 94.32,
             "area": "somewhere",
-            "integer": False
+            "integer": 'false'
         }
         with open("my_file.txt", "w") as f:
             for k, v in dict_to_save.items():

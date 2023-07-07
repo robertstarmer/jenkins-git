@@ -28,6 +28,12 @@ pipeline {
                     echo "test_info.integer is $test_info.integer"
                     echo "test_info.zone is $test_info.zone"
                     echo "test_info.notvalid is $test_info.notvalid"
+                    if(!test_info.integer){
+                        echo "we found it is false"
+                    }
+                    else {
+                        echo "we are not able to examine the 'false'"
+                    }
                     sh label: "run python file", script: "python3 my_python.py -mos_tasks_filename $J_FILENAME"
                     def json_content = readFile(file: J_FILENAME)
                     archiveSingleFile(file_path=J_FILENAME)
