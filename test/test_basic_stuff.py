@@ -33,6 +33,7 @@ class TestBasicStuff(test_case.TestCase):
             "area": "somewhere",
             "integer": 'false'
         }
+        # new comment
         with open("my_file.txt", "w") as f:
             for k, v in dict_to_save.items():
                 f.write(f"{k}={v}\n")
