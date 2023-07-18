@@ -1,9 +1,7 @@
 
 
-# import _pytest.config
-# import conftest
-
 import test_case
+
 
 
 class TestBasicStuff(test_case.TestCase):
@@ -13,8 +11,9 @@ class TestBasicStuff(test_case.TestCase):
         super_name = cls.__name__ if name is None else name
         super().setup_class(super_name)
 
+        
 
-    def setup(self, name: str= None):
+    def setup(self, name: str = None):
         super_name = self.__class__.__name__ if name is None else name
         super().setup(super_name)
 
@@ -27,6 +26,14 @@ class TestBasicStuff(test_case.TestCase):
         super().teardown_class()
 
     def test_one(self):
+        """
+        docstring for test_one
+        """
+        my_s = {
+            "this is",
+            "not other"
+            "still"
+        }
         print("I am test one lets pass")
         dict_to_save = {
             "zone": 94.32,
