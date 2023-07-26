@@ -57,8 +57,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying Hello World"'
+                script {
                 echo "check env"
                 prop_readr.check_env()
+
+                }
 
             }
         }
