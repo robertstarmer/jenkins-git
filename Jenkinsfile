@@ -1,4 +1,4 @@
-def prop_readr = load "helper.groovy"
+
 
 pipeline {
     agent any
@@ -23,6 +23,7 @@ pipeline {
             steps {
                 script {
                     J_FILENAME = "new_output.json"
+                    def prop_readr = load "helper.groovy"
                     test1 = prop_readr.get_property("my_prop.properties")
                     test_info = readProperties file: "my_file.txt"
                     echo "test_info.area is $test_info.area"
@@ -56,6 +57,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying Hello World"'
+                echo "check env"
+                prop_readr.check_env()
+
             }
         }
         
