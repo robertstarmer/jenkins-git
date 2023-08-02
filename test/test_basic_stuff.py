@@ -38,7 +38,7 @@ class TestBasicStuff(test_case.TestCase):
         dict_to_save = {
             "zone": 94.32,
             "area": "somewhere",
-            "integer": 'false'
+            "integer": '123'
         }
         # new comment
         with open("my_file.txt", "w") as f:
