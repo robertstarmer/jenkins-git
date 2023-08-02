@@ -1,3 +1,8 @@
 output.json
 venv/
 __pycache__
+
+# project specific
+my_file.txt
+# vscode
+.vscode/
