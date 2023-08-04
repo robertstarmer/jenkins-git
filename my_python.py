@@ -3,6 +3,7 @@
 import json
 import sys
 import argparse
+import requests
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
